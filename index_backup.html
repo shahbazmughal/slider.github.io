@@ -544,26 +544,7 @@
         color: #2d3748;
         outline: 0;
     }
-    span.annually {
-        margin-left: 10px;
-    }
-    #slider-packages .annually {
-        display: none !important;
-    }
-    #slider-packages.annually .annually {
-        display: inline-block !important;
-    }
-    #slider-packages.annually .monthly {
-        text-decoration: line-through;
-        color: #99a7bb;
-        font-size: 14px;
-    }
-    .slider .slider-right-block .slider-packages .one-hpkg div br {
-        display: none;
-    }
-    .slider .slider-right-block .slider-packages .one-hpkg p {
-        display: none;
-    }
+
 </style>
 
 </head>
@@ -595,58 +576,16 @@
 			<h3>Select Your Plan!</h3>
 			<p>Test the platform with no commitment</p>
 		</div>
-		<div class="slider-packages" id="slider-packages">
+		<div class="slider-packages">
 			<div class="one-hpkg-top"><div >Plans</div><div >Price</div></div>
-			<div class="one-hpkg pkg_1 active">
-                <div >Free</div>
-                <div >Free</div>
-            </div>
-			<div class="one-hpkg pkg_2">
-                <div class="pkg">Plan-1</div>
-                <div class="pay plan1">
-                    <span class="monthly">$27</span>
-                    <span class="annually">$23</span>
-                </div>
-            </div>
-			<div class="one-hpkg pkg_3">
-                <div class="pkg">Plan-2</div>
-                <div class="pay plan2">
-                    <span class="monthly">$47</span>
-                    <span class="annually">$39</span>
-                </div>
-            </div>
-			<div class="one-hpkg pkg_4">
-                <div class="pkg">Plan-3</div>
-                <div class="pay plan3">
-                    <span class="monthly">$97</span>
-                    <span class="annually">$81</span>
-                </div>
-            </div>
-			<div class="one-hpkg pkg_5">
-                <div class="pkg">Plan-4</div>
-                <div class="pay plan4">
-                    <span class="monthly">$197</span>
-                    <span class="annually">$164</span>
-                </div>
-            </div>
-			<div class="one-hpkg pkg_6">
-                <div class="pkg">Plan-5</div>
-                <div class="pay plan5">
-                    <span class="monthly">$397</span>
-                    <span class="annually">$331</span>
-                </div>
-            </div>
-			<div class="one-hpkg pkg_7">
-                <div class="pkg">Plan-6</div>
-                <div class="pay plan6">
-                    <span class="monthly">$797</span>
-                    <span class="annually">$664</span>
-                </div>
-            </div>
-            <div class="one-hpkg pkg_8">
-                <div class="pkg">Custom Plan</div>
-                <div class="pay">Talk to Sales</div>
-            </div>
+			<div class="one-hpkg pkg_1 active"><div >Free</div><div >Free</div></div>
+			<div class="one-hpkg pkg_2"><div class="pkg">Plan-1</div><div class="pay plan1">$27</div></div>
+			<div class="one-hpkg pkg_3"><div class="pkg">Plan-2</div><div class="pay plan2">$47</div></div>
+			<div class="one-hpkg pkg_4"><div class="pkg">Plan-3</div><div class="pay plan3">$97</div></div>
+			<div class="one-hpkg pkg_5"><div class="pkg">Plan-4</div><div class="pay plan4">$197</div></div>
+			<div class="one-hpkg pkg_6"><div class="pkg">Plan-5</div><div class="pay plan5">$397</div></div>
+			<div class="one-hpkg pkg_7"><div class="pkg">Plan-6</div><div class="pay plan6">$797</div></div>
+            <div class="one-hpkg pkg_8"><div class="pkg">Custom Plan</div><div class="pay">Talk to Sales</div></div>
 		</div>
 		<div class="price-hint">For package details go to <a href="#">Price Page </a></div>
 	</div>
@@ -934,13 +873,12 @@
             if(check) {
                 $("#price_value").text(price2[url_id-1]);
                 $(".promo").addClass("active");
-                $("#slider-packages").addClass("annually");
-                // $(".plan1").text("$23");
-                // $(".plan2").text("$39");
-                // $(".plan3").text("$81");
-                // $(".plan4").text("$164");
-                // $(".plan5").text("$331");
-                // $(".plan6").text("$664");
+                $(".plan1").text("$23");
+                $(".plan2").text("$39");
+                $(".plan3").text("$81");
+                $(".plan4").text("$164");
+                $(".plan5").text("$331");
+                $(".plan6").text("$664");
                 mo = "annually"
                 if(url_id == 8) {
                     $(".btn-ohb").attr("href", "https://smartmails.io/contact/");
@@ -950,13 +888,12 @@
             } else {
                 $("#price_value").text(price[url_id-1]);
                 $(".promo").removeClass("active");
-                $("#slider-packages").removeClass("annually");
-                // $(".plan1").text("$27");
-                // $(".plan2").text("$47");
-                // $(".plan3").text("$97");
-                // $(".plan4").text("$197");
-                // $(".plan5").text("$397");
-                // $(".plan6").text("$797");
+                $(".plan1").text("$27");
+                $(".plan2").text("$47");
+                $(".plan3").text("$97");
+                $(".plan4").text("$197");
+                $(".plan5").text("$397");
+                $(".plan6").text("$797");
                 mo = "monthly"
                 if(url_id == 8) {
                     $(".btn-ohb").attr("href", "https://smartmails.io/contact/");
